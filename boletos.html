@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabela de Boletos</title>
+    <link rel="stylesheet" type="text/css" href="./boletos/styles.css">
+</head>
+<body>
+    <h1>Tabela de Boletos</h1>
+    <div>
+        <label for="filtro-unificado">Filtro Unificado:</label>
+        <input type="text" id="filtro-unificado">
+        <label for="vencimento-inicio">Vencimento Início:</label>
+        <input type="date" id="vencimento-inicio" class="filtro-data">
+        <label for="vencimento-fim">Vencimento Fim:</label>
+        <input type="date" id="vencimento-fim" class="filtro-data">
+        <label for="recebimento-inicio">Recebimento Início:</label>
+        <input type="date" id="recebimento-inicio" class="filtro-data">
+        <label for="recebimento-fim">Recebimento Fim:</label>
+        <input type="date" id="recebimento-fim" class="filtro-data">
+    </div>
+    <button id="exportar-excel">Exportar para Excel</button>
+    
+    <table id="boletos-table">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Turma</th>
+                <th>Escola</th>
+                <th>Curso</th>
+                <th>Nascimento</th>
+                <th>Valor</th>
+                <th>Parcelas</th>
+                <th>Vencimento</th>
+                <th>Recebimento</th>
+                <th>Projeto</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+        </tbody>
+    </table>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="./boletos/scripts.js"></script>
+</body>
+<button onclick="window.location.href='home.html'">Voltar para Home</button>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Jovens</title>
+    <link rel="stylesheet" href="./listacadastrojovens/styles.css">
+    <script type="module" src="./listacadastrojovens/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="./Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo" class="logo">
+        <h1 class="centralizado">Lista de Jovens</h1>
+    </header>
+    
+    <div class="filter-container">
+        <input type="text" id="filterInput" placeholder="Filtrar por Nome, RG ou CPF">
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="exportTableToExcel()">Exportar para Excel</button>
+    </div>
+    
+    <div class="table-container">
+        <table id="jovensTable">
+            <thead>
+                <tr>
+                    <th>Nome do Jovem</th>
+                    <th>RG</th>
+                    <th>CPF</th>
+                    <th>Endereço</th>
+                    <th>Data de Nascimento</th>
+                    <th>Responsável Financeiro</th>
+                    <th>Email do Jovem</th>
+                    <th>Email do Responsável</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="jovensTableBody">
+                <!-- Dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="location.href='home.html'">Voltar para Home</button>
+    </div>
+</body>
+</html>

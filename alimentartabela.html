@@ -1,0 +1,71 @@
+<!-- entradajovem.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de Jovens - Instituto Reciclar</title>
+    <link rel="stylesheet" href="./alimentartabela/styles.css">
+</head>
+<body>
+    <header>
+        <img src="./Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Instituto Reciclar" class="logo">
+        <h2>ENTRADA DE JOVENS</h2>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="cadastroForm">
+                <label for="nomeJovem">Nome do Jovem:</label>
+                <input type="text" id="nomeJovem" name="nomeJovem" required>
+                
+                <label for="escolaTecnica">Escola Técnica:</label>
+                <input type="text" id="escolaTecnica" name="escolaTecnica" required>
+                
+                <label for="cursoTecnico">Curso Técnico:</label>
+                <input type="text" id="cursoTecnico" name="cursoTecnico" required>
+                
+                <label for="dataNascimento">Data de Nascimento:</label>
+                <input type="date" id="dataNascimento" name="dataNascimento" required>
+                
+                <label for="valorCurso">Valor do Curso:</label>
+                <input type="number" id="valorCurso" name="valorCurso" step="0.01" required>
+                
+                <label for="numeroParcelas">Número de Parcelas:</label>
+                <input type="number" id="numeroParcelas" name="numeroParcelas" required>
+                
+                <label for="vencimentoBoleto">Vencimento do Boleto:</label>
+                <input type="date" id="vencimentoBoleto" name="vencimentoBoleto" required>
+                
+                <label for="boletosRecebidos">Boletos Recebidos:</label>
+                <input type="number" id="boletosRecebidos" name="boletosRecebidos" required>
+                
+                <label for="dataRecebimento">Data do Recebimento:</label>
+                <input type="date" id="dataRecebimento" name="dataRecebimento" required>
+                
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="Ativo">Ativo</option>
+                    <option value="Inativo">Inativo</option>
+                    <option value="Pendente">Pendente</option>
+                </select>
+                
+                <label for="projeto">Projeto:</label>
+                <input type="text" id="projeto" name="projeto" required>
+                
+                <label for="emailResponsavel">E-mail do Responsável:</label>
+                <input type="email" id="emailResponsavel" name="emailResponsavel" required>
+                
+                <button type="submit">Cadastrar</button>
+                <button type="button" onclick="location.href='home.html'">Voltar para Home</button>
+            </form>
+        </div>
+    </main>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-popup">&times;</span>
+            <p id="popup-message"></p>
+        </div>
+    </div>
+    <script type="module" src="./alimentartabela/script.js"></script>
+</body>
+</html>

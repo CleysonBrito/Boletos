@@ -1,0 +1,41 @@
+<!-- cadastrojovem.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Curso Técnico - Instituto Reciclar</title>
+    <link rel="stylesheet" href="./cadastrodecursotecnico/styles.css">
+    <script type="module" src="./cadastrodecursotecnico/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="./Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Instituto Reciclar" class="logo">
+        <h2>CADASTRO DE CURSO TÉCNICO</h2>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="cadastroCursoTecnicoForm">
+                <label for="nomeCurso">Nome do Curso Técnico:</label>
+                <input type="text" id="nomeCurso" name="nomeCurso" required>
+                
+                <label for="nomeEscola">Nome da Escola:</label>
+                <input type="text" id="nomeEscola" name="nomeEscola" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="location.href='home.html'">Voltar para Home</button>
+        </div>
+        <div id="escolasModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Selecione uma Escola</h3>
+                <input type="text" id="pesquisaEscola" placeholder="Pesquisar escola...">
+                <ul id="listaEscolas"></ul>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

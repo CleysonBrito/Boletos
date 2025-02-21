@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Cursos Técnicos</title>
+    <link rel="stylesheet" href="./listadecursotecnico/styles.css">
+    <script type="module" src="./listadecursotecnico/script.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <header>
+        <img src="./Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Logo" class="logo">
+        <h1 class="centralizado">Lista de Cursos Técnicos</h1>
+    </header>
+    
+    <div class="filter-container">
+        <input type="text" id="filterInput" placeholder="Filtrar por Nome do Curso ou Nome da Escola">
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="exportTableToExcel()">Exportar para Excel</button>
+    </div>
+    
+    <div class="table-container">
+        <table id="cursosTable">
+            <thead>
+                <tr>
+                    <th>Nome do Curso Técnico</th>
+                    <th>Nome da Escola</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="cursosTableBody">
+                <!-- Dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="location.href='home.html'">Voltar para Home</button>
+    </div>
+</body>
+</html>

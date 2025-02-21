@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Jovens</title>
+  <link rel="stylesheet" href="./estoquejovens/styles.css">
+  <!-- Adicione o FontAwesome para o ícone -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://cdn.sheetjs.com/xlsx-0.19.3/package/dist/xlsx.full.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>JOVENS</h1>
+      <div class="botoes-exportar">
+        <button id="exportarExcelFiltrado" class="botao-exportar">
+          <i class="fas fa-filter"></i> Exportar Filtrados
+        </button>
+       
+      </div>
+    </header>
+
+   
+    <!-- Adicionar campo de filtro -->
+    <div class="filtro-container">
+      <input 
+        type="text" 
+        id="filtroGlobal" 
+        placeholder="Buscar por Nome, Status ou Projeto..."
+        class="filtro-input"
+      >
+    </div>
+
+  
+    
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Turma</th>
+            <th>Escola</th>
+            <th>Curso</th>
+            <th>Nascimento</th>
+            <th>Valor</th>
+            <th>Valor c/ Desconto</th> <!-- Nova coluna -->
+            <th>Parcelas</th>
+            <th>Vencimento</th>
+            <th>Recebidos</th>
+            <th>Recebimento</th>
+            <th>Status</th>
+            <th>Projeto</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="table-body"></tbody>
+      </table>
+    </div>
+    
+    <div class="button-container">
+      <button onclick="location.href='home.html'" class="btn-voltar">Voltar para Home</button>
+    </div>
+  </div>
+  
+  <!-- Carrega o script como módulo -->
+  <script type="module" src="./estoquejovens/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #444;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 15px;
+}
+
+.container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.login-box {
+    background-color: #001f8d;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login-box input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff00ff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.login-box button:hover {
+    background-color: #d600d6;
+}
+
+/* Mobile */
+@media screen and (max-width: 480px) {
+    .login-box {
+        padding: 15px;
+    }
+    
+    .login-box input {
+        font-size: 16px; /* Previne zoom em iOS */
+    }
+
+    .title {
+        font-size: 20px;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .container {
+        max-width: 400px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 769px) {
+    .container {
+        max-width: 500px;
+    }
+    
+    .login-box {
+        padding: 30px;
+    }
+}

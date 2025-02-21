@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+  }
+
+  .table-container {
+    max-height: 70vh; /* 70% da altura da viewport */
+    overflow-y: auto;
+    overflow-x: auto;
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+  }
+
+  thead {
+    position: sticky;
+    top: 0;
+    background-color: #f4f4f4;
+    z-index: 1;
+  }
+  
+  th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+    min-width: 120px;
+  }
+  
+  th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f8f8f8;
+  }
+  
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  .inativo {
+    background-color: #f5f5f5;
+    color: #999;
+  }
+
+  .status-select,
+  .status-recebimento,
+  .input-data {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  .button-container {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .btn-voltar {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn-voltar:hover {
+    background-color: #45a049;
+  }
+
+  .status-recebimento {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    background-color: white;
+    transition: background-color 0.3s;
+  }
+
+  .status-recebimento option[value="Concluído"] {
+    background-color: #90EE90;
+  }
+
+  .status-recebimento option[value="Concluído"]:checked {
+    background-color: #28a745;
+    color: white;
+  }
+
+  .status-recebimento option[value="Pendente"] {
+    background-color: #FFB6C1;
+  }
+
+  .status-recebimento option[value="Recebido"] {
+    background-color: #ffd700;
+    color: black;
+  }
+
+  select.status-recebimento:has(option[value="Recebido"]:checked) {
+    background-color: #ffd700;
+    color: black;
+  }
+
+  .status-recebimento option[disabled] {
+    color: #999;
+    font-style: italic;
+  }
+
+  .status-recebimento:has(option[value="Recebido"]:checked) option[value="Concluído"] {
+    color: initial;
+    font-style: normal;
+    background-color: #28a745;
+  }
+
+  .proximo-vencimento {
+    background-color: #ce624f;
+  }
+
+  .proximo-vencimento:hover {
+    background-color: #00ec47 !important;
+  }
+
+  /* Mantém o destaque mesmo quando inativo */
+  .proximo-vencimento.inativo {
+    background-color: #fff3cd !important;
+    color: #e6390e83 !important;
+  }
+
+  .concluido {
+    background-color: #d4edda !important;
+    display: none !important; /* Garante que a linha será ocultada */
+  }
+
+  .concluido select.status-recebimento {
+    background-color: #28a745;
+    color: white;
+  }
+
+  tr {
+    transition: opacity 0.5s;
+  }
+
+  tr.removing {
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  tr.removendo {
+    display: none !important;
+  }
+
+  table th:nth-child(7), /* Valor com Desconto */
+  table td:nth-child(7) {
+    background-color: #f8f9fa;
+    color: #28a745;
+    font-weight: bold;
+  }
+
+  .input-valor {
+    width: 120px;
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: right;
+    font-family: monospace;
+    font-size: 14px;
+  }
+
+  .input-valor:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+
+  .input-valor:hover {
+    background-color: #f8f9fa;
+  }
+
+  .filtro-container {
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+
+  .filtro-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+
+  .filtro-input:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+  }
+
+  .filtro-input::placeholder {
+    color: #6c757d;
+  }
+
+  /* Estilo para linhas filtradas */
+  tr.filtered {
+    display: none;
+  }
+
+  .botao-exportar {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s;
+  }
+
+  .botao-exportar:hover {
+    background-color: #218838;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .botoes-exportar {
+    display: flex;
+    gap: 10px;
+  }
+
+  #exportarExcelFiltrado {
+    background-color: #17a2b8;
+  }
+
+  #exportarExcelFiltrado:hover {
+    background-color: #138496;
+  }

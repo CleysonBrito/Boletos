@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Escolas Técnicas - Instituto Reciclar</title>
+    <link rel="stylesheet" href="./listadeescolatecnica/styles.css">
+    <script type="module" src="./listadeescolatecnica/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="./Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Instituto Reciclar" class="logo">
+        <h2>LISTA DE ESCOLAS TÉCNICAS</h2>
+    </header>
+    
+    <div class="filter-container">
+        <input type="text" id="filterInput" placeholder="Filtrar por CNPJ, Razão Social ou Nome Fantasia">
+    </div>
+    
+    <div class="table-container">
+        <table id="escolasTable">
+            <thead>
+                <tr>
+                    <th>CNPJ</th>
+                    <th>Razão Social</th>
+                    <th>Nome Fantasia</th>
+                    <th>Endereço</th>
+                    <th>Telefone</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="escolasTableBody">
+                <!-- Dados serão inseridos aqui -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="button-container">
+        <button type="button" onclick="location.href='home.html'">Voltar para Home</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!-- cadastrojovem.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro Escola Técnica - Instituto Reciclar</title>
+    <link rel="stylesheet" href="./cadastroescolatecnica/styles.css">
+    <script type="module" src="./cadastroescolatecnica/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="./Reciclar_Logo_Principal_Vertical_Negativo.png" alt="Instituto Reciclar" class="logo">
+        <h2>CADASTRO DE ESCOLA TÉCNICA</h2>
+    </header>
+    <main>
+        <div class="form-container">
+            <form id="cadastroEscolaTecnicaForm">
+                <label for="cnpj">CNPJ:</label>
+                <input type="text" id="cnpj" name="cnpj" required>
+                
+                <label for="razaoSocial">Razão Social:</label>
+                <input type="text" id="razaoSocial" name="razaoSocial" required>
+                
+                <label for="nomeFantasia">Nome Fantasia:</label>
+                <input type="text" id="nomeFantasia" name="nomeFantasia" required>
+                
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" required>
+                
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <div class="button-container">
+            <button type="button" onclick="location.href='home.html'">Voltar para Home</button>
+        </div>
+    </main>
+
+   </body>
+</html>

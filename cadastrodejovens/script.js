@@ -1,20 +1,19 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
+ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyC7eniB3_IFT8E-Tb1VkfktcWUsfLRRYXw",
-    authDomain: "bancoreciclar.firebaseapp.com",
-    databaseURL: "https://bancoreciclar-default-rtdb.firebaseio.com",
-    projectId: "bancoreciclar",
-    storageBucket: "bancoreciclar.firebasestorage.app",
-    messagingSenderId: "418801320354",
-    appId: "1:418801320354:web:3f854deb9e2dda520732fb"
-};
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBg9fo-7vV7lEGhOBxIz-c8LZ0HqloPJQE",
+    authDomain: "bancoreciclar-f3467.firebaseapp.com",
+    projectId: "bancoreciclar-f3467",
+    storageBucket: "bancoreciclar-f3467.firebasestorage.app",
+    messagingSenderId: "776599914729",
+    appId: "1:776599914729:web:df7959279132cb8e690878"
+  };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
 
 document.getElementById('entradaJovemForm').addEventListener('submit', async function(event) {
     event.preventDefault();

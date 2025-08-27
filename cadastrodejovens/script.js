@@ -1,19 +1,22 @@
- import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
-  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
+// Importação dos SDKs necessários
+import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-database.js";
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyBg9fo-7vV7lEGhOBxIz-c8LZ0HqloPJQE",
-    authDomain: "bancoreciclar-f3467.firebaseapp.com",
-    projectId: "bancoreciclar-f3467",
-    storageBucket: "bancoreciclar-f3467.firebasestorage.app",
-    messagingSenderId: "776599914729",
-    appId: "1:776599914729:web:df7959279132cb8e690878"
-  };
+// Nova configuração do Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBg9fo-7vV7lEGhOBxIz-c8LZ0HqloPJQE",
+  authDomain: "bancoreciclar-f3467.firebaseapp.com",
+  databaseURL: "https://bancoreciclar-f3467-default-rtdb.firebaseio.com", // Adicionado para Realtime Database
+  projectId: "bancoreciclar-f3467",
+  storageBucket: "bancoreciclar-f3467.firebasestorage.app",
+  messagingSenderId: "776599914729",
+  appId: "1:776599914729:web:df7959279132cb8e690878"
+};
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  const db = getDatabase(app);
+// Inicialização do Firebase
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
 
 document.getElementById('entradaJovemForm').addEventListener('submit', async function(event) {
     event.preventDefault();

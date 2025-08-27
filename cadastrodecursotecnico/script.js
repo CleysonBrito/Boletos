@@ -1,3 +1,28 @@
+Nova   
+
+// Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBg9fo-7vV7lEGhOBxIz-c8LZ0HqloPJQE",
+    authDomain: "bancoreciclar-f3467.firebaseapp.com",
+    projectId: "bancoreciclar-f3467",
+    storageBucket: "bancoreciclar-f3467.firebasestorage.app",
+    messagingSenderId: "776599914729",
+    appId: "1:776599914729:web:df7959279132cb8e690878"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+</script>
+
+
+
+Antiga
+
 import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
 import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-database.js";
 
